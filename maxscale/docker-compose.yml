@@ -1,0 +1,32 @@
+version: '2'
+services:
+    primary1:
+        image: mariadb:latest
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'Y'
+        volumes:
+            - ./sql/primary1:/docker-entrypoint-initdb.d
+        ports:
+            - "4001:3306"
+
+    primary2:
+        image: mariadb:latest
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'Y'
+        volumes:
+            - ./sql/primary2:/docker-entrypoint-initdb.d
+        ports:
+            - "4002:3306"
+
+    maxscale:
+        image: mariadb/maxscale:latest
+        depends_on:
+            - primary1
+            - primary2
+        volumes:
+            - ./maxscale.cnf.d:/etc/maxscale.cnf.d
+        ports:
+            - "4000:4000"  # Sharded-Service-Listener port
+            - "4006:4006"  # readwrite port
+            - "4008:4008"  # readonly port
+            - "8989:8989"  # REST API port
