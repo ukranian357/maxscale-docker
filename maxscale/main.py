@@ -19,7 +19,7 @@ for maxzip in maxzip:
     
 print("ALL STATES WITH THE STATE KENTUCKY ARE DISPLAYED BELOW")  
 cursor = db.cursor()
-cursor.execute("select * from zipcodes_one.zipcodes_one where State='ky':")
+cursor.execute("select * from zipcodes_one.zipcodes_one where State='ky';")
 KYstate = cursor.fetchall()
 for KYstate in KYstate:
     print(KYstate)
@@ -33,7 +33,7 @@ for between in between:
     
 print("ALL WAGES IN THE STATE OF PA RECORDED IN ARCHIVE DISPLAYED BELOW!")    
 cursor = db.cursor()
-cursor.execute("select totalwages from zipcodes_one.zipcodes_one where zipcodes_one where state='pa';")
+cursor.execute("select totalwages from zipcodes_one.zipcodes_one where state='pa';")
 pawages = cursor.fetchall()
 for pawages in pawages:
     print(pawages)
