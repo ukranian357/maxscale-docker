@@ -65,3 +65,7 @@ Once complete, to remove the cluster and maxscale containers:
 ```
 docker-compose down -v
 ```
+#references/credit:
+#https://github.com/mariadb-corporation/maxscale-docker/blob/master/README.md
+#was used for the initial template which supplied the information needed to enter for this to be a clear and concise guide to running this maxscale horizontal sharding instance.
+#credit also goes to Christine Sutton for providing the needed material in class CNE370 to get this project off the ground and up and running
