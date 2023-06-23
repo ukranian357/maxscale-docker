@@ -28,8 +28,8 @@ print("STATES WITH THE STATE KENTUCKY ARE DISPLAYED BELOW")
 cursor = db.cursor()
 cursor.execute("select * from zipcodes_two.zipcodes_two where State='ky';")
 KYstate = cursor.fetchall()
-for KYstate in KYstate:
-    print(KYstate)
+for KYstatetwo in KYstatetwo:
+    print(KYstatetwo)
     
 print("ZIPCODES BETWEEN 40 and 41K DISPLAYED BELOW") 
 cursor = db.cursor()
@@ -38,6 +38,12 @@ between = cursor.fetchall()
 for between in between:
     print(between)
     
+print("ZIPCODES BETWEEN 40 and 41K DISPLAYED BELOW") 
+cursor = db.cursor()
+cursor.execute("select * from zipcodes_two.zipcodes_two where zipcode between 40000 and 41000;")
+between = cursor.fetchall()
+for betweentwo in betweentwo:
+    print(betweentwo)
 print("ALL WAGES IN THE STATE OF PA RECORDED IN ARCHIVE DISPLAYED BELOW!")    
 cursor = db.cursor()
 cursor.execute("select totalwages from zipcodes_one.zipcodes_one where state='pa';")
