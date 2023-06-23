@@ -17,9 +17,16 @@ maxzip = cursor.fetchall()
 for maxzip in maxzip:
     print(maxzip)
     
-print("ALL STATES WITH THE STATE KENTUCKY ARE DISPLAYED BELOW")  
+print("STATES WITH THE STATE KENTUCKY ARE DISPLAYED BELOW")  
 cursor = db.cursor()
 cursor.execute("select * from zipcodes_one.zipcodes_one where State='ky';")
+KYstate = cursor.fetchall()
+for KYstate in KYstate:
+    print(KYstate)
+
+print("STATES WITH THE STATE KENTUCKY ARE DISPLAYED BELOW")  
+cursor = db.cursor()
+cursor.execute("select * from zipcodes_two.zipcodes_two where State='ky';")
 KYstate = cursor.fetchall()
 for KYstate in KYstate:
     print(KYstate)
