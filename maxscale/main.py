@@ -1,6 +1,6 @@
 # Igor Nikolaev
 #CNE 370 Maxscale_Docker Assignment
-#W3Schools SQL was used for helping with remembering and find new SQL solutions along with old reference material from SQL class with Christine sutton at RTC 
+#W3Schools and SQL was used for helping with remembering and find new SQL solutions along with old reference material from SQL class with Christine sutton at RTC 
 # This is a working python Python script to query two sharded databses using Max-Scale Horizontal Load Balancing.
 import mysql.connector
 
