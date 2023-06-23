@@ -6,15 +6,6 @@ ARG GIT_COMMIT
 ARG GIT_TREE_STATE
 ARG BUILD_TIME
 
-FROM python:3
-
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
 CMD [ "/bin/bash" ]
 
 COPY maxscale.list /etc/apt/sources.list.d/maxscale.list.tmp
